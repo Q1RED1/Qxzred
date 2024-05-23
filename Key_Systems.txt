@@ -23,7 +23,7 @@ function CorrectKeyNotification()
         Image = "",
         Time = 4
     })
-loadstring(game:HttpGet("Your Script!"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Q1RED1/Q1R/main/nnn"))()
 end
 
 function IncorrectKeyNotification()
