@@ -9,7 +9,7 @@ OrionLib:MakeNotification({
 	Time = 4
 })
 
-_G.Key = "Key"
+_G.Key = "Key, M, Z"
 _G.KeyInput = "string"
 
 function MakeScriptHub()
@@ -23,7 +23,7 @@ function CorrectKeyNotification()
         Image = "",
         Time = 4
     })
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Q1RED1/Q1R/main/nnn"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Q1RED1/Q1R/main/Cyber_Lock_OP-5_2.txt"))()
 end
 
 function IncorrectKeyNotification()
