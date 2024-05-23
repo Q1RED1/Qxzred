@@ -1,0 +1,63 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Login System", HidePremium = false, SaveConfig = false, IntroEnabled = false, IntroText = "Key System"})
+
+OrionLib:MakeNotification({
+	Name = "Login System",
+	Content = "Welcome:  "..Player.Name.." ",
+	Image = "",
+	Time = 4
+})
+
+_G.Key = "Key"
+_G.KeyInput = "string"
+
+function MakeScriptHub()
+    print("Authorized!")
+end
+
+function CorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Login System",
+        Content = "Authorized!",
+        Image = "",
+        Time = 4
+    })
+loadstring(game:HttpGet("Your Script!"))()
+end
+
+function IncorrectKeyNotification()
+    OrionLib:MakeNotification({
+        Name = "Login System",
+        Content = "Wrong Key!",
+        Image = "",
+        Time = 4
+    })
+end
+
+local Tab = Window:MakeTab({
+	Name = "Login",
+	Icon = "",
+	PremiumOnly = false
+})
+
+Tab:AddTextbox({
+	Name = "Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		_G.KeyInput = Value
+	end	  
+})
+
+Tab:AddButton({
+	Name = "Login",
+	Callback = function()
+      	if _G.KeyInput == _G.Key then
+        MakeScriptHub()
+        CorrectKeyNotification()
+        else
+            IncorrectKeyNotification()
+        end
+  	end    
+})
